@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <meta name="description" content="Wanna know how strong your love is ??.Then why so late.Fill up the form.Thanks.Made by AKIB">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+    body {
+        margin: 0px;
+        padding: 0px;
+        background: #e4a1e5;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: auto;
+        border: 2px solid;
+        border-radius: 30px;
+        background: -webkit-linear-gradient(left, #c17cd2, #d05b9f);
+        margin-top: 3%;
+        padding: 3%;
+        box-shadow: -1px 0px 5px 3px #070000d4;
+        font-family: 'Akaya Telivigala', cursive;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    input,
+    button {
+        padding: 11px;
+        margin: 11px;
+        border: none;
+        border-radius: .5rem;
+        outline: none;
+        font-family: 'JetBrains Mono', monospace;
+    }
+    
+    button:hover {
+        box-shadow: -1px 0px 5px 3px #e7dfdf;
+        background-color: black;
+    }
+    
+    button {
+        cursor: pointer;
+        background-color: #000000c2;
+        color: rgb(241, 227, 227);
+    }
+    
+    .cont2 {
+        margin: auto;
+    }
+    
+    img {
+        height: 140px;
+        width: 140px;
+        margin: auto;
+    }
+    
+    #pHide {
+        text-align: center;
+        font-size: 25px;
+    }
+    /* // love animation */
+    
+    .lds-heart {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+        transform: rotate(45deg);
+        transform-origin: 40px 40px;
+    }
+    
+    .lds-heart div {
+        top: 32px;
+        left: 32px;
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        background: #fff;
+        animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    
+    .lds-heart div:after,
+    .lds-heart div:before {
+        content: " ";
+        position: absolute;
+        display: block;
+        width: 32px;
+        height: 32px;
+        background: #fff;
+    }
+    
+    .lds-heart div:before {
+        left: -24px;
+        border-radius: 50% 0 0 50%;
+    }
+    
+    .lds-heart div:after {
+        top: -24px;
+        border-radius: 50% 50% 0 0;
+    }
+    
+    @keyframes lds-heart {
+        0% {
+            transform: scale(0.95);
+        }
+        5% {
+            transform: scale(1.1);
+        }
+        39% {
+            transform: scale(0.85);
+        }
+        45% {
+            transform: scale(1);
+        }
+        60% {
+            transform: scale(0.95);
+        }
+        100% {
+            transform: scale(0.9);
+        }
+    }
+    
+    .lText {
+        font-family: 'Akaya Telivigala', cursive;
+        font-size: 25px;
+        text-align: center;
+        padding: 2rem;
+        color: #090908f5;
+    }
+    
+    .button {
+        width: fit-content;
+        margin: auto;
+    }
+    
+    @media only screen and (max-width: 1200px) and (min-width: 320px) {
+        .container {
+            width: 100%;
+        }
+        .lText {
+            font-size: 23px;
+            padding: 33px 0px;
+        }
+        .cont2 {
+            display: flex;
+        }
+    }
+</style>
+
+<body oncontextmenu="return false">
+    <div class="container">
+
+        <h1>Calculate how much you love your partner !!</h1>
+
+        <input type="text" id="inpt1" placeholder="Your nick name" required="" />
+        <input type="text" id="inpt2" placeholder="Your partner's nick name" required="" />
+        <button id="btn" onclick="Submit()">Calculate Love</button>
+
+
+
+
+
+        <div id="hide">
+            <p id="pHide"></p>
+        </div>
+
+        <div class="cont2">
+            <div class="lds-heart" id="an1">
+                <div></div>
+            </div>
+
+            <img src="img.png" alt="">
+
+            <div class="lds-heart" id="an2">
+                <div></div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <p class="lText">Wanna know how strong your love is ??. <br>Then why so late.Fill up the form. <br> Thanks <br><span>Made by AKIB</span>
+    </p>
+    <div class="button">
+        <button id="bgnBtn" onclick="promptMe()" class="btn">Source Code</button>
+
+    </div>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
